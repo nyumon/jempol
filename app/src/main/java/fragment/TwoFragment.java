@@ -1,7 +1,7 @@
 package fragment;
 
 /**
- * Created by ricky on 23/03/16.
+ * Created by com.nyumon on 23/03/16.
  */
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import ricky.jempol.R;
+import com.nyumon.jempol.R;
 
 
 public class TwoFragment extends Fragment{

@@ -1,4 +1,4 @@
-package ricky.jempol;
+package com.nyumon.jempol;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

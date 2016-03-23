@@ -1,4 +1,4 @@
-package ricky.jempol;
+package com.nyumon.jempol;
 
 import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
@@ -33,6 +33,7 @@ import fragment.FourFragment;
 import fragment.OneFragment;
 import fragment.ThreeFragment;
 import fragment.TwoFragment;
+import com.nyumon.jempol.R;
 
 public class MainActivity extends AppCompatActivity {
 
