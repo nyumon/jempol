@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private int[] tabIcons = {
-            R.drawable.home,
-            R.drawable.avatar,
-            R.drawable.favorite,
-            R.drawable.music,
-            R.drawable.three
+            R.drawable.time(1),
+            R.drawable.people(1),
+            R.drawable.left(1),
+            R.drawable.music(1),
+            R.drawable.gear(1)
     };
 
     @Override
