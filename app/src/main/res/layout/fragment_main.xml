@@ -36,7 +36,8 @@
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="80sp"
             android:layout_marginRight="20sp"
-            android:src="@drawable/write" />
+            android:src="@drawable/write"
+            android:onClick="NewPost"/>
 
     </android.support.design.widget.CoordinatorLayout>
 
