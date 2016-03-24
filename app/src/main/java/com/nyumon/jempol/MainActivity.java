@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
