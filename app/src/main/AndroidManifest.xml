@@ -3,8 +3,10 @@
     package="com.nyumon.jempol">
 
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -31,7 +33,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".NewPostActivity" />
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".Pemberitahuan"></activity>
     </application>
 
 </manifest>

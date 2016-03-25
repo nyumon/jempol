@@ -40,7 +40,7 @@ public class SearchActivity extends AppCompatActivity {
         searchbox.setIconified(false);
         searchbox.requestFocus();
         searchbox.requestFocusFromTouch();
-        
+
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED,0);
 
