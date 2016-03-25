@@ -1,6 +1,9 @@
 package com.nyumon.jempol;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.CursorLoader;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -30,6 +33,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -45,10 +49,9 @@ public class NewPostActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    ImageView viewImage;
-
-    ImageButton b;
-
+    int REQUEST_CAMERA = 0, SELECT_FILE = 1;
+    ImageButton btnSelect;
+    ImageView ivImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,32 +70,19 @@ public class NewPostActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.arrows);
 
-        b=(ImageButton)findViewById(R.id.UploadFoto);
-
-        viewImage=(ImageView)findViewById(R.id.Preview);
-
-        b.setOnClickListener(new View.OnClickListener() {
+        btnSelect = (ImageButton) findViewById(R.id.UploadFoto);
+        btnSelect.setOnClickListener(new View.OnClickListener() {
 
             @Override
-
             public void onClick(View v) {
-
-                int newHeight = 150;
-                int newWidth = 150;
-                viewImage.requestLayout();
-
-                viewImage.getLayoutParams().height=newHeight;
-                viewImage.getLayoutParams().width=newWidth;
-                viewImage.setScaleType(ImageView.ScaleType.FIT_XY);
-
                 selectImage();
-
             }
-
         });
-
-
+        ivImage = (ImageView) findViewById(R.id.Preview);
     }
+
+
+
 
     @Override
 
@@ -118,182 +108,96 @@ public class NewPostActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
     private void selectImage() {
-
-
-
-        final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
-
-
+        final CharSequence[] items = { "Take Photo", "Choose from Library",
+                "Cancel" };
 
         AlertDialog.Builder builder = new AlertDialog.Builder(NewPostActivity.this);
-
         builder.setTitle("Add Photo!");
-
-        builder.setItems(options, new DialogInterface.OnClickListener() {
-
+        builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
-
             public void onClick(DialogInterface dialog, int item) {
-
-                if (options[item].equals("Take Photo"))
-
-                {
-
+                if (items[item].equals("Take Photo")) {
                     Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-                    File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
-
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
-
-                    startActivityForResult(intent, 1);
-
-                }
-
-                else if (options[item].equals("Choose from Gallery"))
-
-                {
-
-                    Intent intent = new   Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
-                    startActivityForResult(intent, 2);
-
-
-
-                }
-
-                else if (options[item].equals("Cancel")) {
-
+                    startActivityForResult(intent, REQUEST_CAMERA);
+                } else if (items[item].equals("Choose from Library")) {
+                    Intent intent = new Intent(
+                            Intent.ACTION_PICK,
+                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    intent.setType("image/*");
+                    startActivityForResult(
+                            Intent.createChooser(intent, "Select File"),
+                            SELECT_FILE);
+                } else if (items[item].equals("Cancel")) {
                     dialog.dismiss();
-
                 }
-
             }
-
         });
-
         builder.show();
-
     }
-
-
 
     @Override
-
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
+            if (requestCode == SELECT_FILE)
+                onSelectFromGalleryResult(data);
+            else if (requestCode == REQUEST_CAMERA)
+                onCaptureImageResult(data);
+        }
+    }
 
-            if (requestCode == 1) {
+    private void onCaptureImageResult(Intent data) {
+        Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
 
-                File f = new File(Environment.getExternalStorageDirectory().toString());
+        File destination = new File(Environment.getExternalStorageDirectory(),
+                System.currentTimeMillis() + ".jpg");
 
-                for (File temp : f.listFiles()) {
-
-                    if (temp.getName().equals("temp.jpg")) {
-
-                        f = temp;
-
-                        break;
-
-                    }
-
-                }
-
-                try {
-
-                    Bitmap bitmap;
-
-                    BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
-
-
-
-                    bitmap = BitmapFactory.decodeFile(f.getAbsolutePath(),
-
-                            bitmapOptions);
-
-
-
-                    viewImage.setImageBitmap(bitmap);
-
-
-
-                    String path = android.os.Environment
-
-                            .getExternalStorageDirectory()
-
-                            + File.separator
-
-                            + "Phoenix" + File.separator + "default";
-
-                    f.delete();
-
-                    OutputStream outFile = null;
-
-                    File file = new File(path, String.valueOf(System.currentTimeMillis()) + ".jpg");
-
-                    try {
-
-                        outFile = new FileOutputStream(file);
-
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 85, outFile);
-
-                        outFile.flush();
-
-                        outFile.close();
-
-                    } catch (FileNotFoundException e) {
-
-                        e.printStackTrace();
-
-                    } catch (IOException e) {
-
-                        e.printStackTrace();
-
-                    } catch (Exception e) {
-
-                        e.printStackTrace();
-
-                    }
-
-                } catch (Exception e) {
-
-                    e.printStackTrace();
-
-                }
-
-            } else if (requestCode == 2) {
-
-
-
-                Uri selectedImage = data.getData();
-
-                String[] filePath = { MediaStore.Images.Media.DATA };
-
-                Cursor c = getContentResolver().query(selectedImage,filePath, null, null, null);
-
-                c.moveToFirst();
-
-                int columnIndex = c.getColumnIndex(filePath[0]);
-
-                String picturePath = c.getString(columnIndex);
-
-                c.close();
-
-                Bitmap thumbnail = (BitmapFactory.decodeFile(picturePath));
-
-                Log.w("...***...", picturePath + "");
-
-                viewImage.setImageBitmap(thumbnail);
-
-            }
-
+        FileOutputStream fo;
+        try {
+            destination.createNewFile();
+            fo = new FileOutputStream(destination);
+            fo.write(bytes.toByteArray());
+            fo.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
+        ivImage.setImageBitmap(thumbnail);
     }
+
+    @SuppressWarnings("deprecation")
+    private void onSelectFromGalleryResult(Intent data) {
+        Uri selectedImageUri = data.getData();
+        String[] projection = { MediaStore.MediaColumns.DATA };
+        Cursor cursor = managedQuery(selectedImageUri, projection, null, null,
+                null);
+        int column_index = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
+        cursor.moveToFirst();
+
+        String selectedImagePath = cursor.getString(column_index);
+
+        Bitmap bm;
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(selectedImagePath, options);
+        final int REQUIRED_SIZE = 200;
+        int scale = 1;
+        while (options.outWidth / scale / 2 >= REQUIRED_SIZE
+                && options.outHeight / scale / 2 >= REQUIRED_SIZE)
+            scale *= 2;
+        options.inSampleSize = scale;
+        options.inJustDecodeBounds = false;
+        bm = BitmapFactory.decodeFile(selectedImagePath, options);
+
+        ivImage.setImageBitmap(bm);
+    }
+
 
 
 
