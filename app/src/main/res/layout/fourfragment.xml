@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="info.androidhive.materialtabs.fragments.OneFragment">
+    android:padding="15sp"
+    tools:context="com.nyumon.jempol.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,11 +15,21 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Notification"
-                android:textSize="40sp"
-                android:textStyle="bold"/>
+                android:text="NOTIFICATION"
+                android:textStyle="bold"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:textSize="15sp"/>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/title_row">
+            </View>
 
         </LinearLayout>
 

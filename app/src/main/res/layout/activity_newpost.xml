@@ -27,7 +27,8 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:layout_marginTop="?attr/actionBarSize"
-           android:paddingTop="20sp">
+           android:padding="15sp"
+           android:paddingTop="25sp">
 
            <android.support.design.widget.TextInputLayout
                android:layout_width="match_parent"
