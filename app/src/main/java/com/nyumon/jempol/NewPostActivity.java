@@ -69,13 +69,21 @@ public class NewPostActivity extends AppCompatActivity {
 
         b=(ImageButton)findViewById(R.id.UploadFoto);
 
-        viewImage=(ImageView)findViewById(R.id.viewImage);
+        viewImage=(ImageView)findViewById(R.id.Preview);
 
         b.setOnClickListener(new View.OnClickListener() {
 
             @Override
 
             public void onClick(View v) {
+
+                int newHeight = 150;
+                int newWidth = 150;
+                viewImage.requestLayout();
+
+                viewImage.getLayoutParams().height=newHeight;
+                viewImage.getLayoutParams().width=newWidth;
+                viewImage.setScaleType(ImageView.ScaleType.FIT_XY);
 
                 selectImage();
 
