@@ -9,7 +9,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/lantas"
+            android:src="@drawable/jempol"
             android:id="@+id/logo"
 
             android:layout_centerVertical="true"
