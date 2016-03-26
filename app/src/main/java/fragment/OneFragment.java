@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import com.nyumon.jempol.R;
 
 
-public class OneFragment extends Fragment{
+public class OneFragment extends Fragment {
 
     public OneFragment() {
         // Required empty public constructor
