@@ -69,12 +69,13 @@
                             android:text="Akun Privat"/>
 
                         <Switch
-                            android:layout_marginLeft="180sp"
+                            android:layout_marginLeft="140sp"
                             android:id="@+id/toggle_buttonn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textOff="Off"
-                            android:textOn="On"/>
+                            android:textOn="On"
+                            android:switchMinWidth="80sp"/>
 
                     </LinearLayout>
 
