@@ -29,7 +29,7 @@ public class splash extends Activity {
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
-                    Intent intent = new Intent(splash.this,MainActivity.class);
+                    Intent intent = new Intent(splash.this,LoginActivity.class);
                     startActivity(intent);
                 }
             }

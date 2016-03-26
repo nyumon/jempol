@@ -41,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.notif1,
             R.drawable.gear1
     };
+    private int[] tabIconsActive = {
+            R.drawable.quotes,
+            R.drawable.people,
+            R.drawable.time,
+            R.drawable.notif,
+            R.drawable.gear
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +56,8 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -60,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
+
+        tabLayout.getTabAt(0).setIcon(tabIconsActive[0]);
+
     }
 
     @Override
@@ -84,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(2).setIcon(tabIcons[2]);
         tabLayout.getTabAt(3).setIcon(tabIcons[3]);
         tabLayout.getTabAt(4).setIcon(tabIcons[4]);
+
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -94,6 +103,49 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFrag(new FourFragment(), "Four");
         adapter.addFrag(new FiveFragment(), "Five");
         viewPager.setAdapter(adapter);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                setupTabIcons();
+                switch (position){
+                    case 0:
+                        tabLayout.getTabAt(0).setIcon(tabIconsActive[0]);
+                        setTitle("JEMPOL");
+                        break;
+
+                    case 1:
+                        tabLayout.getTabAt(1).setIcon(tabIconsActive[1]);
+                        setTitle("PROFIL");
+                        break;
+
+                    case 2:
+                        tabLayout.getTabAt(2).setIcon(tabIconsActive[2]);
+                        setTitle("TERHANGAT");
+                        break;
+
+                    case 3:
+                        tabLayout.getTabAt(3).setIcon(tabIconsActive[3]);
+                        setTitle("PEMBERITAHUAN");
+                        break;
+
+                    case 4:
+                        tabLayout.getTabAt(4).setIcon(tabIconsActive[4]);
+                        setTitle("PENGATURAN");
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
