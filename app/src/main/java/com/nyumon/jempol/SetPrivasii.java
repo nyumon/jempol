@@ -28,7 +28,7 @@ public class SetPrivasii extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.set_privasii);
+        setContentView(R.layout.akun);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         aSwitch = (Switch)findViewById(R.id.toggle_buttonn);
         pil_switch = (TextView) findViewById(R.id.pil_switch);

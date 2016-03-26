@@ -96,6 +96,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void Logout(View view){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+
     private void setupTabIcons() {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
