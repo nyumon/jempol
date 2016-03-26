@@ -8,10 +8,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
-public class Pemberitahuan extends AppCompatActivity {
+public class SetPrivasii extends AppCompatActivity {
 
     private MenuItem mSearchAction;
     private boolean isSearchOpened = false;
@@ -19,18 +22,40 @@ public class Pemberitahuan extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private TextView pil_switch;
+    private Switch aSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pemberitahuan);
-
+        setContentView(R.layout.set_privasii);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        aSwitch = (Switch)findViewById(R.id.toggle_buttonn);
+        pil_switch = (TextView) findViewById(R.id.pil_switch);
+        aSwitch.setChecked(false);
+
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                String aktif = "Bila akun Anda bersifat privat,hanya orang yang Anda terima yang " +
+                        "dapat melihat foto Anda.Pengikut Anda saat ini tidak akan terkena efeknya";
+                String tdk_aktif = "Bila akun Anda bersifat tidak privat,semua orang yang Anda terima " +
+                        "dapat melihat foto Anda.Pengikut Anda saat ini tidak akan terkena efeknya";
+                if(aSwitch.isChecked()){
+                    pil_switch.setText(aktif.toString());
+                }else{
+                    pil_switch.setText(tdk_aktif.toString());
+                }
+
+            }
+        });
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        setTitle("Pemberitahuan");
+        setTitle("Privasi");
 
         final ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
@@ -40,7 +65,6 @@ public class Pemberitahuan extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(final MenuItem item) {
-
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
@@ -49,6 +73,7 @@ public class Pemberitahuan extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
     public void onRadioButtonSuka(View view) {
         // Is the button now checked?
@@ -108,5 +133,4 @@ public class Pemberitahuan extends AppCompatActivity {
                     break;
         }
     }
-
 }
