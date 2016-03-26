@@ -8,11 +8,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import com.nyumon.jempol.R;
 
 
 public class FiveFragment extends Fragment{
+
+    private Switch aSwitch;
 
     public FiveFragment() {
         // Required empty public constructor

@@ -35,7 +35,7 @@
                 android:id="@+id/pemberitahuan"
                 android:layout_marginLeft="5dp"
                 android:textColor="#727272"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pemberitahuan"
                 android:textSize="15sp"
@@ -58,7 +58,8 @@
                 android:text="Akun"
                 android:paddingTop="10sp"
                 android:paddingBottom="10sp"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:onClick="setAkun"/>
             <View
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
@@ -72,10 +73,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test"
+                android:text="Privasi"
                 android:paddingTop="10sp"
                 android:paddingBottom="10sp"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:onClick="setPrivasi"/>
             <View
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"

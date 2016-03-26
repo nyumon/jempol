@@ -15,7 +15,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -71,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -84,6 +87,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void setPemberitahuan(View view){
         Intent intent = new Intent(this, Pemberitahuan.class);
+        startActivity(intent);
+    }
+
+    public void setPrivasi(View view){
+        Intent intent = new Intent(this, SetPrivasii.class);
         startActivity(intent);
     }
 
