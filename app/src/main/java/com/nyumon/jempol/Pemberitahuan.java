@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 public class Pemberitahuan extends AppCompatActivity {
 
@@ -47,4 +49,47 @@ public class Pemberitahuan extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    public void onRadioButtonSuka(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radio_suka_mati:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.radio_suka_Ikut:
+                if (checked)
+                    // Ninjas rule
+                    break;
+            case R.id.radio_suka_semua:
+                if (checked)
+                    // Ninjas rule
+                    break;
+        }
+    }
+
+    public void onRadioButtonKomentar(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radio_komentar_mati:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.radio_komentar_Ikut:
+                if (checked)
+                    // Ninjas rule
+                    break;
+            case R.id.radio_komentar_semua:
+                if (checked)
+                    // Ninjas rule
+                    break;
+        }
+    }
+
 }
