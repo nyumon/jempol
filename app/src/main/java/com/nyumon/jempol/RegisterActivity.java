@@ -21,14 +21,25 @@ public class RegisterActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        btn1 = (Button) findViewById(R.id.button);
         btn2 = (Button) findViewById(R.id.button2);
 
-        btn2.setOnClickListener(new View.OnClickListener() {
+
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
-}
+    }
+
