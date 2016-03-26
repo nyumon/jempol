@@ -55,7 +55,7 @@ public class SetPrivasii extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        setTitle("Privasi");
+        setTitle("Akun");
 
         final ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
