@@ -1,5 +1,6 @@
 package com.nyumon.jempol;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -14,7 +15,7 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
-public class SetPrivasii extends AppCompatActivity {
+public class akun extends AppCompatActivity {
 
     private MenuItem mSearchAction;
     private boolean isSearchOpened = false;
@@ -24,6 +25,8 @@ public class SetPrivasii extends AppCompatActivity {
     private ViewPager viewPager;
     private TextView pil_switch;
     private Switch aSwitch;
+    private TextView Sunting;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +118,11 @@ public class SetPrivasii extends AppCompatActivity {
                     // Ninjas rule
                     break;
         }
+    }
+
+    public void Sunting1(View view){
+        Intent intent = new Intent(this, SuntingProfil.class);
+        startActivity(intent);
     }
 
     public void onRadioButtonLanggan(View view) {
