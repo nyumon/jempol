@@ -56,7 +56,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="15sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menampilkan "
+                        android:textAppearance="@style/TinyText"/>
+
+                    <TextView
+                        android:id="@+id/search_query"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak ada hasil"
+                        android:textAppearance="@style/TinyText"
+                        android:textStyle="bold"
+                        android:textColor="@color/textColorPrimary"/>
+
+
+                </LinearLayout>
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/viewpager"

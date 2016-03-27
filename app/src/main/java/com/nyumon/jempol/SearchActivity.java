@@ -16,6 +16,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +36,7 @@ public class SearchActivity extends AppCompatActivity {
     private InputMethodManager imm;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private TextView search_query;
     private int[] tabIcons = {
             R.drawable.quotes1,
             R.drawable.people1,
@@ -46,6 +50,7 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        search_query = (TextView) findViewById(R.id.search_query);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -74,6 +79,19 @@ public class SearchActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
+
+        searchbox.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                search_query.setText(searchbox.getQuery());
+                return false;
+            }
+        });
 
     }
 
