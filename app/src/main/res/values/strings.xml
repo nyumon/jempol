@@ -9,5 +9,6 @@
         <item>Kerusakan Rambu</item>
         <item>Lainnya</item>
     </string-array>
+    <string name="title_activity_sunting_profil">SuntingProfil</string>
 
 </resources>

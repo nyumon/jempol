@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15sp"
     tools:context="com.nyumon.jempol.MainActivity">
 
     <ScrollView
@@ -35,7 +34,7 @@
                 android:id="@+id/pemberitahuan"
                 android:layout_marginLeft="5dp"
                 android:textColor="#727272"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Pemberitahuan"
                 android:textSize="15sp"
@@ -49,31 +48,14 @@
                 android:layout_height="1dp"
                 android:background="@color/subtitle_row">
             </View>
-            <TextView
-                android:id="@+id/akun"
-                android:textColor="#727272"
-                android:layout_marginLeft="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Akun"
-                android:paddingTop="10sp"
-                android:paddingBottom="10sp"
-                android:textSize="15sp"
-                android:onClick="setAkun"/>
-            <View
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:background="@color/subtitle_row">
-            </View>
+
             <TextView
                 android:id="@+id/test"
                 android:textColor="#727272"
                 android:layout_marginLeft="5dp"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Privasi"
+                android:text="Akun"
                 android:paddingTop="10sp"
                 android:paddingBottom="10sp"
                 android:textSize="15sp"
@@ -85,6 +67,26 @@
                 android:layout_height="1dp"
                 android:background="@color/subtitle_row">
             </View>
+
+            <TextView
+                android:id="@+id/logout"
+                android:textColor="#727272"
+                android:layout_marginLeft="5dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:textSize="15sp"
+                android:onClick="Logout"/>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/subtitle_row">
+            </View>
+
 
         </LinearLayout>
 

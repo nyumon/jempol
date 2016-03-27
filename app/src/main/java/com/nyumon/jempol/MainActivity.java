@@ -1,7 +1,6 @@
 package com.nyumon.jempol;
 
 import android.content.Intent;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -15,9 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Switch;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,9 +89,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setPrivasi(View view){
-        Intent intent = new Intent(this, SetPrivasii.class);
+        Intent intent = new Intent(this, akun.class);
         startActivity(intent);
     }
+
+    public void Logout(View view){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+
+
+
+
+
+
 
     private void setupTabIcons() {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
