@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
     private int[] tabIcons = {
             R.drawable.quotes1,
             R.drawable.people1,

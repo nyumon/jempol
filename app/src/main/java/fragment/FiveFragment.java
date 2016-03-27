@@ -16,6 +16,7 @@ import com.nyumon.jempol.R;
 
 public class FiveFragment extends Fragment{
 
+
     private Switch aSwitch;
 
     public FiveFragment() {
@@ -32,6 +33,11 @@ public class FiveFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fivefragment, container, false);
+
+    }
+    private void closefragment() {
+
+        getActivity().getFragmentManager().popBackStack();
     }
 
 }
