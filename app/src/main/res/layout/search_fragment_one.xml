@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cari Orang"
                 android:textStyle="bold"
-                android:textSize=""/>
+                android:textAppearance="@style/Toolbar.TitleText"/>
             <View
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
