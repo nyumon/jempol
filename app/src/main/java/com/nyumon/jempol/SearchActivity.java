@@ -50,7 +50,6 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        search_query = (TextView) findViewById(R.id.search_query);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -88,7 +87,6 @@ public class SearchActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                search_query.setText(searchbox.getQuery());
                 return false;
             }
         });

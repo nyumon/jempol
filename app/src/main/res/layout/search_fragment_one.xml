@@ -8,24 +8,24 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10sp">
+        android:layout_height="match_parent">
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="15sp">
 
             <TableRow
                 android:weightSum="3"
-                android:paddingTop="10sp"
-                android:paddingBottom="10sp"
+                android:paddingTop="14sp"
+                android:paddingBottom="14sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical">
 
                 <ImageView
-                    android:layout_width="24sp"
-                    android:layout_height="24sp"
+                    android:layout_width="32sp"
+                    android:layout_height="32sp"
                     android:src="@drawable/jempol"/>
 
                 <RelativeLayout
@@ -33,18 +33,34 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:padding="10sp"
-                    android:paddingRight="0sp"
                     android:gravity="center_vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Amir Hamzah"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/textColorPrimary"/>
+                        android:orientation="vertical"
+                        android:paddingLeft="5sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Amir Hamzah"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/textColorPrimary"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="amrhzh"
+                            android:textSize="14sp"
+                            android:textColor="@color/textColorSecondary"/>
+
+                    </LinearLayout>
 
                     <ImageButton
+                        android:paddingTop="10sp"
+                        android:paddingBottom="10sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/subscribe"
