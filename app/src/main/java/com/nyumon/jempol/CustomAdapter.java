@@ -19,7 +19,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     private static final String TAG = "CustomAdapter";
 
     private String[] mDataSet;
-
+    private String[] mDataSetHari;
+    private String[] mDataSetMinggu;
+    private String[] mDataSetBulan;
     /**
      * Provide a reference to the type of views that you are using (custom ViewHolder)
      */
@@ -49,7 +51,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
      * @param dataSet String[] containing the data to populate views to be used by RecyclerView.
      */
     public CustomAdapter(String[] dataSet) {
+
         mDataSet = dataSet;
+        mDataSetHari = dataSet;
+        mDataSetMinggu = dataSet;
+        mDataSetBulan = dataSet;
     }
 
     // Create new views (invoked by the layout manager)
@@ -70,11 +76,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         // Get element from your dataset at this position and replace the contents of the view
         // with that element
         viewHolder.getTextView().setText(mDataSet[position]);
+        viewHolder.getTextView().setText(mDataSetHari[position]);
+        viewHolder.getTextView().setText(mDataSetMinggu[position]);
+        viewHolder.getTextView().setText(mDataSetBulan[position]);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
+
         return mDataSet.length;
     }
 }

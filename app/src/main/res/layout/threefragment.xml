@@ -17,12 +17,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TRENDINGS"
+                android:text="TRENDING"
                 android:textStyle="bold"
                 android:paddingTop="10sp"
                 android:paddingBottom="10sp"
                 android:textSize="15sp"/>
-
             <View
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
@@ -30,72 +29,39 @@
                 android:layout_height="2dp"
                 android:background="@color/title_row">
             </View>
-
-            <TextView
+            <!-- postitem.xml -->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hari ini"
-                android:textSize="15dp"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/grid_layout_rb">
+                    <RadioButton android:id="@+id/grid_layout_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hari ini"/>
+                    <RadioButton android:id="@+id/grid2_layout_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minggu Ini"/>
+                    <RadioButton android:id="@+id/grid3_layout_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bulan Ini"/>
+                </RadioGroup>
 
-            <GridView
-                android:id="@+id/GridHariIni"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:columnWidth="100dp"
-                android:numColumns="auto_fit"
-                android:verticalSpacing="5dp"
-                android:horizontalSpacing="5dp"
-                android:stretchMode="columnWidth"
-                android:gravity="center" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
 
-            <View
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:background="@color/title_row">
-            </View>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Minggu ini"
-                android:textSize="15dp"/>
-
-            <GridView
-                android:id="@+id/GridMingguIni"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:columnWidth="100dp"
-                android:numColumns="auto_fit"
-                android:verticalSpacing="5dp"
-                android:horizontalSpacing="5dp"
-                android:stretchMode="columnWidth"
-                android:gravity="center" />
-            <View
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:background="@color/title_row">
-            </View>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bulan ini"
-                android:textSize="15dp"/>
-
-            <GridView
-                android:id="@+id/GridBulanIni"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:columnWidth="100dp"
-                android:numColumns="auto_fit"
-                android:verticalSpacing="5dp"
-                android:horizontalSpacing="5dp"
-                android:stretchMode="columnWidth"
-                android:gravity="center" />
         </LinearLayout>
+
     </ScrollView>
 
 </RelativeLayout>
