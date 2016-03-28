@@ -30,75 +30,11 @@
                 android:background="@color/title_row">
             </View>
             <!-- postitem.xml -->
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:id="@+id/gambar"
-                android:paddingRight="16dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                >
-
-                <ImageView
-                    android:id="@+id/postThumb"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/jempol"
-                    android:scaleType="centerCrop"
-                    android:layout_marginRight="5dp"/>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_toRightOf="@+id/gambar">
-                <TextView
-                    android:id="@+id/Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignTop="@id/postThumb"
-                    android:layout_toRightOf="@id/postThumb"
-                    android:maxLines="2"
-                    android:textStyle="bold"
-                    android:textColor="@color/textColorPrimary"
-                    android:text=" snaljdlja;lks"
-                    android:textIsSelectable="false"
-                    android:textSize="16sp"
-                    android:ellipsize="end"/>
-
-            </LinearLayout>
-                <View
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="2dp"
-                    android:background="@color/title_row">
-                </View>
-
-
-            </LinearLayout>
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    android:checkedButton="@+id/linear_layout_rb">
-                    <RadioButton android:id="@+id/linear_layout_rb"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="linear_layout_manager"/>
-                    <RadioButton android:id="@+id/grid_layout_rb"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="grid_layout_manager"/>
-                </RadioGroup>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recyclerView"

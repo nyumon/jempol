@@ -91,7 +91,7 @@ public class FourFragment extends Fragment{
         // Set CustomAdapter as the adapter for RecyclerView.
         mRecyclerView.setAdapter(mAdapter);
 
-        mLinearLayoutRadioButton = (RadioButton) rootView.findViewById(R.id.linear_layout_rb);
+        /*mLinearLayoutRadioButton = (RadioButton) rootView.findViewById(R.id.linear_layout_rb);
         mLinearLayoutRadioButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,7 +105,7 @@ public class FourFragment extends Fragment{
             public void onClick(View v) {
                 setRecyclerViewLayoutManager(LayoutManagerType.GRID_LAYOUT_MANAGER);
             }
-        });
+        });*/
 
         return rootView;
     }
