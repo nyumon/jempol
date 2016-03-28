@@ -37,8 +37,9 @@ public class ThreeFragment extends Fragment{
     private static final String TAG = "RecyclerViewFragment";
     private static final String KEY_LAYOUT_MANAGER = "layoutManager";
     private static final int SPAN_COUNT = 4;
-    private static final int DATASET_COUNT = 100;
-
+    private static final int DATASET_HARI = 40;
+    private static final int DATASET_MINGGU = 70;
+    private static final int DATASET_BULAN = 100;
     private enum LayoutManagerType {
         GRID_LAYOUT_MANAGER
     }
@@ -139,16 +140,16 @@ public class ThreeFragment extends Fragment{
     }
 
     private void initDataset() {
-        mDatasetHari = new String[DATASET_COUNT];
-        for (int i = 0; i < DATASET_COUNT; i++) {
+        mDatasetHari = new String[DATASET_HARI];
+        for (int i = 0; i < DATASET_HARI; i++) {
             mDatasetHari[i] = "";
         }
-        mDatasetMinggu = new String[DATASET_COUNT];
-        for (int i = 0; i < DATASET_COUNT; i++) {
+        mDatasetMinggu = new String[DATASET_MINGGU];
+        for (int i = 0; i < DATASET_MINGGU; i++) {
             mDatasetMinggu[i] = "";
         }
-        mDatasetBulan = new String[DATASET_COUNT];
-        for (int i = 0; i < DATASET_COUNT; i++) {
+        mDatasetBulan = new String[DATASET_BULAN];
+        for (int i = 0; i < DATASET_BULAN; i++) {
             mDatasetBulan[i] = "";
         }
     }
