@@ -75,6 +75,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:text="Ganti Foto Profil"
+                        android:id="@+id/gantifoto"
                         android:layout_marginLeft="10sp"
                         android:layout_marginRight="10sp"
                         android:layout_toRightOf="@+id/FotoProfil"
