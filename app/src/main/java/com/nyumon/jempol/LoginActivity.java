@@ -48,11 +48,17 @@ public class LoginActivity extends Activity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (edt1.getText().toString().equals("admin") && edt2.getText().toString().equals("admin")) {
+                if (edt1.getText().toString().equals("user") && edt2.getText().toString().equals("user")) {
                     //Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
-                } else {
+                }
+                else if(edt1.getText().toString().equals("moderator") && edt2.getText().toString().equals("moderator"))
+                {
+                    Intent intent = new Intent(LoginActivity.this, ModeratorActivity.class);
+                    startActivity(intent);
+                }
+                else {
                     Toast.makeText(getApplicationContext(), "Wrong Password", Toast.LENGTH_SHORT).show();
                     tv.setText("Wrong Password");
                 }

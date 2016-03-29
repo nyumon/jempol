@@ -79,6 +79,7 @@ public class NewPostActivity extends AppCompatActivity {
             }
         });
         ivImage = (ImageView) findViewById(R.id.Preview);
+        ImageButton lokasi = (ImageButton) findViewById(R.id.grid3_layout_rb);
     }
 
 
