@@ -24,5 +24,11 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
+<<<<<<< HEAD
     compile 'com.android.support:cardview-v7:23.0.+'
+=======
+    compile('com.mikepenz:materialdrawer:5.1.6@aar') {
+        transitive = true
+    }
+>>>>>>> 3f3f5d57758d184fea2a22589e0fddce0ee38630
 }

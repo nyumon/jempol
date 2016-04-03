@@ -3,11 +3,14 @@ package fragment;
 /**
  * Created by com.nyumon on 23/03/16.
  */
+import android.content.ClipData;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,11 +19,14 @@ import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -28,6 +34,9 @@ import com.nyumon.jempol.CustomAdapter;
 import com.nyumon.jempol.MainActivity;
 import com.nyumon.jempol.NewPostActivity;
 import com.nyumon.jempol.R;
+
+import java.util.ArrayList;
+import java.util.logging.Handler;
 
 
 public class FourFragment extends Fragment{
@@ -38,6 +47,10 @@ public class FourFragment extends Fragment{
     private static final String KEY_LAYOUT_MANAGER = "layoutManager";
     private static final int SPAN_COUNT = 2;
     private static final int DATASET_COUNT = 60;
+    private SwipeRefreshLayout swipeRefresh;
+    private ArrayList<ClipData.Item> itemList;
+
+
 
     private enum LayoutManagerType {
         GRID_LAYOUT_MANAGER,
@@ -61,7 +74,9 @@ public class FourFragment extends Fragment{
 
         // Initialize dataset, this data would usually come from a local content provider or
         // remote server.
+
         initDataset();
+
     }
 
     public FourFragment() {
