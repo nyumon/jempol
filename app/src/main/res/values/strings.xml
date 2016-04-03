@@ -10,5 +10,6 @@
         <item>Lainnya</item>
     </string-array>
     <string name="title_activity_sunting_profil">SuntingProfil</string>
+    <string name="title_activity_profil2">ProfilActivity2</string>
 
 </resources>

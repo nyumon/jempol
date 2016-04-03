@@ -5,6 +5,7 @@ package fragment;
  */
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,8 @@ import android.view.ViewGroup;
 import com.nyumon.jempol.R;
 
 
-public class TwoFragment extends Fragment{
+public class TwoFragment extends Fragment {
+    private FragmentTabHost mTabHost;
 
     public TwoFragment() {
         // Required empty public constructor
@@ -27,7 +29,9 @@ public class TwoFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.twofragment, container, false);
+        View rootView = inflater.inflate(R.layout.twofragment,container, false);
+        return rootView;
+
     }
 
 }

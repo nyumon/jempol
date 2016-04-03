@@ -18,14 +18,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 
-import com.mikepenz.materialdrawer.AccountHeader;
-import com.mikepenz.materialdrawer.AccountHeaderBuilder;
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private Drawer navigationDrawerLeft;
-    private AccountHeader headerNavigationLeft;
-
     private int[] tabIcons = {
             R.drawable.quotes1,
             R.drawable.people1,
@@ -82,30 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Navigation Drawer
         //header
-        headerNavigationLeft = new AccountHeaderBuilder()
-                .withActivity(this)
-                .withCompactStyle(false)
-                .withSavedInstance(savedInstanceState)
-                .withThreeSmallProfileImages(false)
-                .withHeaderBackground(R.drawable.gradient_bg_hover)
-                .addProfiles(
-                        new ProfileDrawerItem().withName("Riro").withEmail("riro@gmail.com").withIcon(getResources().getDrawable(R.drawable.jempol))
-                )
-                .build();
-        //list
-        navigationDrawerLeft = new DrawerBuilder()
-                .withActivity(this)
-                .withToolbar(toolbar)
-                .withDisplayBelowStatusBar(true)
-                .withActionBarDrawerToggleAnimated(true)
-                .withDrawerGravity(Gravity.LEFT)
-                .withAccountHeader(headerNavigationLeft)
-                .withSavedInstance(savedInstanceState)
-                .withSelectedItem(0)
-                .build();
-        navigationDrawerLeft.addItem(new ProfileDrawerItem().withName("Fragment 1").withIcon(getResources().getDrawable(R.mipmap.ic_launcher)));
-        navigationDrawerLeft.addItem(new ProfileDrawerItem().withName("Fragment 2").withIcon(getResources().getDrawable(R.mipmap.ic_launcher)));
-        navigationDrawerLeft.addItem(new ProfileDrawerItem().withName("Fragment 3").withIcon(getResources().getDrawable(R.mipmap.ic_launcher)));
     }
 
 
