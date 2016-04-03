@@ -39,7 +39,7 @@ import java.util.ArrayList;
 import java.util.logging.Handler;
 
 
-public class FourFragment extends Fragment{
+public class FourFragment<T extends AppCompatActivity> extends Fragment{
 
     String firstString = "";
     String secondString = "";
