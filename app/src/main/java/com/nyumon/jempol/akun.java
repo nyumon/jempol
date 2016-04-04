@@ -126,7 +126,10 @@ public class akun extends AppCompatActivity {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
     public void keprofil(View view){
         Intent intent = new Intent(this, ProfilActivity2.class);
         startActivity(intent);
@@ -138,6 +141,9 @@ public class akun extends AppCompatActivity {
 
 
 
+<<<<<<< HEAD
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
+=======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
     public void onRadioButtonLanggan(View view) {
         // Is the button now checked?

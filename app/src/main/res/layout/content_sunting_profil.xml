@@ -97,11 +97,14 @@
                     android:layout_marginTop="30sp">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <android.support.design.widget.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/inputusername"
                             android:padding="0sp">
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 
@@ -121,6 +124,7 @@
                                 android:background="#b6b6b6">
                             </View>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </android.support.design.widget.TextInputLayout>
                         <android.support.design.widget.TextInputLayout
                             android:layout_width="match_parent"
@@ -128,6 +132,8 @@
                             android:id="@+id/deskripsi"
                             android:layout_marginTop="10sp">
 
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 
@@ -138,7 +144,12 @@
                                 android:id="@+id/EditEmail"
                                 android:hint="Email"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 android:padding="10sp"/>
+=======
+                                android:padding="10sp"
+                                android:layout_marginTop="10sp"/>
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
                                 android:padding="10sp"
                                 android:layout_marginTop="10sp"/>
@@ -151,6 +162,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </android.support.design.widget.TextInputLayout>
 
                         <android.support.design.widget.TextInputLayout
@@ -158,6 +170,8 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/InputPikiran"
                             android:layout_marginTop="10sp">
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 
@@ -169,7 +183,12 @@
                                 android:id="@+id/PikiranAnda"
                                 android:hint="Deskripsi"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 android:padding="10sp"/>
+=======
+                                android:padding="10sp"
+                                android:layout_marginTop="10sp"/>
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
                                 android:padding="10sp"
                                 android:layout_marginTop="10sp"/>
@@ -182,7 +201,10 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </android.support.design.widget.TextInputLayout>
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 

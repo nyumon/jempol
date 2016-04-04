@@ -52,6 +52,7 @@
             android:layout_marginTop="105sp">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
@@ -61,6 +62,8 @@
 
             </android.support.v4.view.ViewPager>
 =======
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,6 +77,9 @@
                     android:background="@color/windowBackground"/>
 
             </LinearLayout>
+<<<<<<< HEAD
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
+=======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 
         </android.support.v4.widget.DrawerLayout>
@@ -81,7 +87,11 @@
     </android.support.design.widget.CoordinatorLayout>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 </LinearLayout>
+=======
+</LinearLayout>
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 </LinearLayout>
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da

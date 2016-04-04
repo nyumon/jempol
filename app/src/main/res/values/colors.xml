@@ -9,7 +9,10 @@
     <color name="textColorLight">#fefefe</color>
     <color name="windowBackground">#FFFFFF</color>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <color name="windowBackgroundSecondary">#f3f3f3</color>
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
     <color name="navigationBarColor">#FFFFFF</color>
@@ -18,7 +21,10 @@
     <color name="subtitle_row">#dddddd</color>
     <color name="icon_color">#b2ebf2</color>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <color name="line_color">#dfdfdf</color>
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 </resources>

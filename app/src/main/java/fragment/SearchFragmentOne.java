@@ -3,9 +3,12 @@ package fragment;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 import android.view.LayoutInflater;
@@ -14,10 +17,13 @@ import android.view.View;
 
 import com.nyumon.jempol.R;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.nyumon.jempol.Searching.SearchPeopleAdapter;
 import com.nyumon.jempol.Searching.SearchPeopleDataSet;
 
 import java.util.ArrayList;
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 
@@ -27,12 +33,15 @@ import java.util.ArrayList;
 public class SearchFragmentOne extends Fragment {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private RecyclerView recyclerView;
     private SearchPeopleAdapter adapter;
     private ArrayList<SearchPeopleDataSet> DataSet;
 
     private LinearLayoutManager rlm;
 
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
     public SearchFragmentOne() {
@@ -43,7 +52,10 @@ public class SearchFragmentOne extends Fragment {
     public void onCreate(Bundle savedInstanceStated) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         initDataSet();
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
         super.onCreate(savedInstanceStated);
@@ -51,6 +63,7 @@ public class SearchFragmentOne extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceStated) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         View rootView = inflater.inflate(R.layout.search_fragment_one, container, false);
@@ -77,6 +90,9 @@ public class SearchFragmentOne extends Fragment {
             DataSet.add(new SearchPeopleDataSet("Username " + i, "Display Name " + i, 1000+(24*i), 1000+(24*i), (i%2)==0?true:false));
         }
 
+=======
+        return inflater.inflate(R.layout.search_fragment_one, container, false);
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
         return inflater.inflate(R.layout.search_fragment_one, container, false);
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da

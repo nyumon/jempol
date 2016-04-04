@@ -11,6 +11,10 @@
     </string-array>
     <string name="title_activity_sunting_profil">SuntingProfil</string>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <string name="title_activity_profil2">ProfilActivity2</string>
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
     <string name="title_activity_profil2">ProfilActivity2</string>
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da

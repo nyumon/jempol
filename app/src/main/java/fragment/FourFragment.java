@@ -4,6 +4,10 @@ package fragment;
  * Created by com.nyumon on 23/03/16.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import android.content.ClipData;
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 import android.content.ClipData;
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
@@ -13,6 +17,11 @@ import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -26,12 +35,15 @@ import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 =======
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +52,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+<<<<<<< HEAD
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
+=======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -50,6 +65,12 @@ import com.nyumon.jempol.NewPostActivity;
 import com.nyumon.jempol.R;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import java.util.ArrayList;
+import java.util.logging.Handler;
+
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 import java.util.ArrayList;
 import java.util.logging.Handler;
@@ -65,11 +86,17 @@ public class FourFragment extends Fragment{
     private static final int SPAN_COUNT = 2;
     private static final int DATASET_COUNT = 60;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
     private SwipeRefreshLayout swipeRefresh;
     private ArrayList<ClipData.Item> itemList;
 
 
+<<<<<<< HEAD
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
+=======
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 
     private enum LayoutManagerType {
@@ -95,7 +122,13 @@ public class FourFragment extends Fragment{
         // Initialize dataset, this data would usually come from a local content provider or
         // remote server.
 <<<<<<< HEAD
+<<<<<<< HEAD
         initDataset();
+=======
+
+        initDataset();
+
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 
         initDataset();
@@ -200,7 +233,11 @@ public class FourFragment extends Fragment{
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 =======
 }
 >>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
