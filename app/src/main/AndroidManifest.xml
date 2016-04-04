@@ -57,8 +57,4 @@
             android:theme="@style/MyMaterialTheme"></activity>
     </application>
 
-<<<<<<< HEAD
 </manifest>
-=======
-</manifest>
->>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da

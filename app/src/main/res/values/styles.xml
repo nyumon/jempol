@@ -7,9 +7,6 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
     <style name="LargeText">
         <item name="android:textSize">18sp</item>
     </style>
@@ -24,16 +21,6 @@
     </style>
     <style name="TinyText">
         <item name="android:textSize">10sp</item>
-=======
-    <style name="TinyText">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/textColorSecondary</item>
->>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
-=======
-    <style name="TinyText">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/textColorSecondary</item>
->>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
     </style>
 
     <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
