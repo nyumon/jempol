@@ -110,7 +110,7 @@
                     <GridView
                         android:id="@+id/grid_view"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="500sp"
                         android:columnWidth="200sp"
                         android:numColumns="3"
                         android:gravity="center"
@@ -122,7 +122,8 @@
                         android:clipToPadding="false"
                         android:scrollbars="vertical"
                         android:stretchMode="columnWidth"
-                        android:layout_below="@+id/scroll1" />
+                        android:layout_below="@+id/scroll1"
+                        />
 
 
 

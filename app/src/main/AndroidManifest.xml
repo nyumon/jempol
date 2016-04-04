@@ -54,6 +54,10 @@
         <activity
             android:name=".ProfilActivity2"
             android:label="@string/title_activity_profil2"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".MyPost"
+            android:label="@string/title_activity_my_post"
             android:theme="@style/MyMaterialTheme"></activity>
     </application>
 
