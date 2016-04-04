@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -17,3 +18,88 @@
 
 </LinearLayout>
 
+=======
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nyumon.jempol.SearchActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15sp">
+
+            <TableRow
+                android:weightSum="3"
+                android:paddingTop="14sp"
+                android:paddingBottom="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32sp"
+                    android:layout_height="32sp"
+                    android:src="@drawable/jempol"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:padding="10sp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="5sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Amir Hamzah"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/textColorPrimary"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="amrhzh"
+                            android:textSize="14sp"
+                            android:textColor="@color/textColorSecondary"/>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:paddingTop="10sp"
+                        android:paddingBottom="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/subscribe"
+                        android:background="@color/windowBackground"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/subtitle_row">
+            </View>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da

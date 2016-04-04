@@ -10,10 +10,18 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.view.Gravity;
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+<<<<<<< HEAD
+=======
+import android.widget.AdapterView;
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
 import android.widget.EditText;
 
 import java.util.ArrayList;
@@ -33,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+<<<<<<< HEAD
 
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
     private int[] tabIcons = {
             R.drawable.quotes1,
             R.drawable.people1,
@@ -68,7 +79,12 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(tabIconsActive[0]);
 
 
+<<<<<<< HEAD
 
+=======
+        //Navigation Drawer
+        //header
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
     }
 
 
@@ -218,4 +234,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da

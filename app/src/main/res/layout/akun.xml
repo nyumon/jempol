@@ -83,7 +83,12 @@
                         android:text="Ubah Kata Sandi"
                         android:paddingTop="10sp"
                         android:paddingBottom="10sp"
+<<<<<<< HEAD
                         android:textSize="15sp"/>
+=======
+                        android:textSize="15sp"
+                        android:onClick="keprofil"/>
+>>>>>>> d5fc2cfbbcc5f96b2ed7c33893beda9d02a4d5da
                     <View
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
