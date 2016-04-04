@@ -113,7 +113,6 @@ public class FourFragment extends Fragment{
                 setRecyclerViewLayoutManager(LayoutManagerType.LINEAR_LAYOUT_MANAGER);
             }
         });
-
         mGridLayoutRadioButton = (RadioButton) rootView.findViewById(R.id.grid_layout_rb);
         mGridLayoutRadioButton.setOnClickListener(new View.OnClickListener() {
             @Override

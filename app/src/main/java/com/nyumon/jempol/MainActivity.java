@@ -10,12 +10,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+
 import android.view.Gravity;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.AdapterView;
+
 import android.widget.EditText;
 
 import java.util.ArrayList;
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
     private int[] tabIcons = {
             R.drawable.quotes1,
             R.drawable.people1,
@@ -69,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(tabIconsActive[0]);
 
 
-        //Navigation Drawer
-        //header
     }
 
 
@@ -219,4 +221,3 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
-
