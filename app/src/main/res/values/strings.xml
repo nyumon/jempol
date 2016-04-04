@@ -11,12 +11,7 @@
     </string-array>
     <string name="title_activity_sunting_profil">SuntingProfil</string>
     <string name="title_activity_profil2">ProfilActivity2</string>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <string name="title_activity_my_post">MyPost</string>
 
-=======
->>>>>>> c874c2e03c69b41280512292d4392aa0e19e24ae
-=======
->>>>>>> c874c2e03c69b41280512292d4392aa0e19e24ae
 </resources>
