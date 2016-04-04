@@ -24,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -31,6 +32,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.nyumon.jempol.CustomAdapter;
+import com.nyumon.jempol.ImageAdapter;
 import com.nyumon.jempol.MainActivity;
 import com.nyumon.jempol.NewPostActivity;
 import com.nyumon.jempol.R;
@@ -75,6 +77,8 @@ public class FourFragment<T extends AppCompatActivity> extends Fragment{
         // Initialize dataset, this data would usually come from a local content provider or
         // remote server.
 
+
+
         initDataset();
 
     }
@@ -105,6 +109,11 @@ public class FourFragment<T extends AppCompatActivity> extends Fragment{
         mAdapter = new CustomAdapter(mDataset);
         // Set CustomAdapter as the adapter for RecyclerView.
         mRecyclerView.setAdapter(mAdapter);
+
+        GridView gridView = (GridView) rootView.findViewById(R.id.grid_view);
+
+        // Instance of ImageAdapter Class
+        gridView.setAdapter(new ImageAdapter(getActivity()));
 
         /*mLinearLayoutRadioButton = (RadioButton) rootView.findViewById(R.id.linear_layout_rb);
         mLinearLayoutRadioButton.setOnClickListener(new View.OnClickListener() {
