@@ -1,12 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.nyumon.jempol.ProfilActivity2">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,39 +26,29 @@
                 android:background="@color/title_row">
             </View>
             <!-- postitem.xml -->
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <android.support.v7.widget.RecyclerView
+                <!--<android.support.v7.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-            </LinearLayout>
+                    android:layout_height="match_parent"/>-->
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"/>
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </RelativeLayout>
 
-            <GridView
-                android:id="@+id/grid_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:columnWidth="200sp"
-                android:numColumns="3"
-                android:gravity="center"
-                android:horizontalSpacing="30dp"
-                android:verticalSpacing="30dp"
-                android:paddingTop="30dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:clipToPadding="false"
-                android:scrollbars="vertical"
-                android:stretchMode="columnWidth"
-                />
 
 
 
         </LinearLayout>
 
-    </ScrollView>
-
-</RelativeLayout>
+</LinearLayout>

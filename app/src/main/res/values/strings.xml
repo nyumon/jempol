@@ -12,4 +12,6 @@
     <string name="title_activity_sunting_profil">SuntingProfil</string>
     <string name="title_activity_profil2">ProfilActivity2</string>
 
+    <string name="title_activity_my_post">MyPost</string>
+
 </resources>

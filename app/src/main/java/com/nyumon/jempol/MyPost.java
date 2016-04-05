@@ -12,46 +12,48 @@ import android.support.v7.widget.RecyclerView.OnScrollListener;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-public class ProfilActivity2 extends AppCompatActivity {
+public class MyPost extends AppCompatActivity {
     private Toolbar toolbar;
+    int total =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profil2);
+        setContentView(R.layout.activity_my_post);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-
+        final ImageView jempol = (ImageView)findViewById(R.id.jempol);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        setTitle("Profil");
+        setTitle("Postingan");
 
         final ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.arrows);
+        Intent i = getIntent();
+
+        // Selected image id
+        int position = i.getExtras().getInt("id");
+        ImageAdapter imageAdapter = new ImageAdapter(this);
+
+        ImageView imageView = (ImageView) findViewById(R.id.postsaya);
+        imageView.setImageResource(imageAdapter.mThumbIds[position]);
 
 
 
 
-        GridView gridView = (GridView) findViewById(R.id.grid_view);
-
-        // Instance of ImageAdapter Class
-        gridView.setAdapter(new ImageAdapter(this));
-
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        jempol.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
+            public void onClick(View v) {
+                final TextView  tot = (TextView)findViewById(R.id.totjempol);
+                total += 1;
+                tot.setText(String.valueOf(total));
 
-                // Sending image id to FullScreenActivity
-                Intent i = new Intent(getApplicationContext(), MyPost.class);
-                // passing array index
-                i.putExtra("id", position);
-                startActivity(i);
             }
         });
 

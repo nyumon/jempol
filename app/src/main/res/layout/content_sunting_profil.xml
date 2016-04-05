@@ -96,7 +96,11 @@
                     android:padding="10sp"
                     android:layout_marginTop="30sp">
 
-
+                    <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/inputusername"
+                            android:padding="0sp">
 
                             <EditText
                                 android:layout_width="match_parent"
@@ -113,22 +117,33 @@
                                 android:background="#b6b6b6">
                             </View>
 
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/deskripsi"
+                            android:layout_marginTop="10sp">
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="#fff"
                                 android:id="@+id/EditEmail"
                                 android:hint="Email"
-                                android:padding="10sp"
-                                android:layout_marginTop="10sp"/>
+                                android:padding="10sp"/>
                             <View
                                 android:layout_width="fill_parent"
                                 android:layout_height="1dp"
                                 android:background="#b6b6b6">
                             </View>
 
+                        </android.support.design.widget.TextInputLayout>
 
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/InputPikiran"
+                            android:layout_marginTop="10sp">
 
                             <EditText
                                 android:layout_width="match_parent"
@@ -144,7 +159,7 @@
                                 android:background="#b6b6b6">
                             </View>
 
-
+                        </android.support.design.widget.TextInputLayout>
 
                         <Button
                             android:layout_width="fill_parent"
