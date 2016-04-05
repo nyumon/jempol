@@ -21,6 +21,13 @@ import android.widget.AdapterView;
 
 import android.widget.EditText;
 
+import com.mikepenz.materialdrawer.AccountHeader;
+import com.mikepenz.materialdrawer.AccountHeaderBuilder;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private Drawer navigationDrawerLeft;
+    private AccountHeader headerNavigationLeft;
 
     private int[] tabIcons = {
             R.drawable.quotes1,
@@ -72,7 +81,31 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout.getTabAt(0).setIcon(tabIconsActive[0]);
 
+        headerNavigationLeft = new AccountHeaderBuilder()
+                .withActivity(this)
+                .withCompactStyle(false)
+                .withSavedInstance(savedInstanceState)
+                .withHeaderBackground(R.color.colorPrimaryDark)
+                .addProfiles(
+                        new ProfileDrawerItem().withName("Ilham").withEmail("ridho@gmail.com").withIcon(getResources().getDrawable(R.drawable.jempol))
+                )
+                .build();
 
+
+        navigationDrawerLeft = new DrawerBuilder()
+                .withActivity(this)
+                .withToolbar(toolbar)
+                .withDisplayBelowStatusBar(true)
+                .withActionBarDrawerToggleAnimated(true)
+                .withDrawerGravity(Gravity.LEFT)
+                .withSavedInstance(savedInstanceState)
+                .withAccountHeader(headerNavigationLeft)
+                .withSelectedItem(0)
+                .build();
+
+        navigationDrawerLeft.addItem(new PrimaryDrawerItem().withName("Fragment 1").withIcon(getResources().getDrawable(R.drawable.jempol)));
+        navigationDrawerLeft.addItem(new PrimaryDrawerItem().withName("Fragment 2").withIcon(getResources().getDrawable(R.drawable.jempol)));
+        navigationDrawerLeft.addItem(new PrimaryDrawerItem().withName("Fragment 3").withIcon(getResources().getDrawable(R.drawable.jempol)));
     }
 
 
