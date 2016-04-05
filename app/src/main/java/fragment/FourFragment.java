@@ -91,8 +91,6 @@ public class FourFragment extends Fragment{
 
         View rootView = inflater.inflate(R.layout.fourfragment, container, false);
 
-<<<<<<< HEAD
-=======
         itemList = new LinkedList<>();
         swipeRefresh = (SwipeRefreshLayout)rootView.findViewById(R.id.swipeRefresh);
         RecyclerView mRecyclerView = (RecyclerView) rootView.findViewById(R.id.rvList);
@@ -136,8 +134,6 @@ public class FourFragment extends Fragment{
                 },2000);
             }
         });
-
->>>>>>> de19aead133c19874e7fdba2e29366084d1e4cf0
         return rootView;
     }
 
@@ -148,23 +144,21 @@ public class FourFragment extends Fragment{
         loadData1();
     }
 
-<<<<<<< HEAD
     /**
      * Generates Strings for RecyclerView's adapter. This data would usually come
      * from a local content provider or remote server.
      */
 
 
-    private void initDataset() {
+    /*private void initDataset() {
         mDataset = new String[DATASET_COUNT];
         for (int i = 0; i < DATASET_COUNT; i++) {
             mDataset[i] = "This is element #" + i;
-=======
+        }}*/
     private void loadData1(){
         itemList.clear();
         for (int i = 1; i <= 20; i++) {
             itemList.add(new ClipData.Item("Atas" + i));
->>>>>>> de19aead133c19874e7fdba2e29366084d1e4cf0
         }
         mAdapter.addAll(itemList);
     }
