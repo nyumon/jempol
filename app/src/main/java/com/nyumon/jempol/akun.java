@@ -125,6 +125,17 @@ public class akun extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void keprofil(View view){
+        Intent intent = new Intent(this, ProfilActivity2.class);
+        startActivity(intent);
+    }
+
+
+
+
+
+
+
     public void onRadioButtonLanggan(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
