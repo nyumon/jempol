@@ -31,10 +31,6 @@ public class MyPost extends AppCompatActivity {
 
         setTitle("Postingan");
 
-        final ActionBar actionBar = getSupportActionBar();
-        assert actionBar != null;
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.arrows);
         Intent i = getIntent();
 
         // Selected image id
@@ -43,6 +39,7 @@ public class MyPost extends AppCompatActivity {
 
         ImageView imageView = (ImageView) findViewById(R.id.postsaya);
         imageView.setImageResource(imageAdapter.mThumbIds[position]);
+
 
 
 
@@ -57,12 +54,14 @@ public class MyPost extends AppCompatActivity {
             }
         });
 
-
+        final ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeAsUpIndicator(R.drawable.arrows);
     }
 
     @Override
     public boolean onOptionsItemSelected(final MenuItem item) {
-
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
@@ -71,6 +70,13 @@ public class MyPost extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    public void kecomment(View view){
+        Intent intent = new Intent(this, Comment.class);
+        startActivity(intent);
+    }
+
+
 
 
 

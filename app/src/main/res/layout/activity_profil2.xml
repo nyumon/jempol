@@ -2,7 +2,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:isScrollContainer="true">
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -24,22 +25,15 @@
 
 
         </android.support.design.widget.AppBarLayout>
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="60sp"
-            tools:context="com.nyumon.jempol.MainActivity">
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:id="@+id/scroll1">
+                    android:id="@+id/scroll1"
+                    android:isScrollContainer="true">
 
                     <ImageView
                         android:layout_width="fill_parent"
@@ -107,9 +101,7 @@
 
 
                     </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
+
                         <GridView
                             android:id="@+id/grid_view"
                             android:layout_width="match_parent"
@@ -127,16 +119,10 @@
                             android:stretchMode="columnWidth"
                             />
 
-                    </RelativeLayout>
 
 
                 </LinearLayout>
-
-
-
-
             </ScrollView>
-        </RelativeLayout>
 
     </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>
