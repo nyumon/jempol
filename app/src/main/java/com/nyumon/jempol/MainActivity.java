@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         navigationDrawerLeft = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
-                .withDisplayBelowStatusBar(true)
+                .withDisplayBelowStatusBar(false)
                 .withActionBarDrawerToggleAnimated(true)
                 .withDrawerGravity(Gravity.LEFT)
                 .withSavedInstance(savedInstanceState)
