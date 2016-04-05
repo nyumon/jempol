@@ -134,7 +134,6 @@ public class FourFragment extends Fragment{
                 },2000);
             }
         });
-
         return rootView;
     }
 
@@ -145,6 +144,17 @@ public class FourFragment extends Fragment{
         loadData1();
     }
 
+    /**
+     * Generates Strings for RecyclerView's adapter. This data would usually come
+     * from a local content provider or remote server.
+     */
+
+
+    /*private void initDataset() {
+        mDataset = new String[DATASET_COUNT];
+        for (int i = 0; i < DATASET_COUNT; i++) {
+            mDataset[i] = "This is element #" + i;
+        }}*/
     private void loadData1(){
         itemList.clear();
         for (int i = 1; i <= 20; i++) {
