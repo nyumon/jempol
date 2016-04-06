@@ -120,6 +120,7 @@ public class FourFragment extends Fragment{
         mAdapter.setLinearLayoutManager(mLayoutManager);
         mAdapter.setRecyclerView(mRecyclerView);
         mRecyclerView.setAdapter(mAdapter);
+<<<<<<< HEAD
         swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -134,6 +135,25 @@ public class FourFragment extends Fragment{
                 },2000);
             }
         });
+=======
+
+        /*mLinearLayoutRadioButton = (RadioButton) rootView.findViewById(R.id.linear_layout_rb);
+        mLinearLayoutRadioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setRecyclerViewLayoutManager(LayoutManagerType.LINEAR_LAYOUT_MANAGER);
+            }
+        });
+
+        mGridLayoutRadioButton = (RadioButton) rootView.findViewById(R.id.grid_layout_rb);
+        mGridLayoutRadioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setRecyclerViewLayoutManager(LayoutManagerType.GRID_LAYOUT_MANAGER);
+            }
+        });*/
+
+>>>>>>> parent of 74f1639... timeline
         return rootView;
     }
 
@@ -148,9 +168,13 @@ public class FourFragment extends Fragment{
      * Generates Strings for RecyclerView's adapter. This data would usually come
      * from a local content provider or remote server.
      */
+<<<<<<< HEAD
 
 
     /*private void initDataset() {
+=======
+    private void initDataset() {
+>>>>>>> parent of 74f1639... timeline
         mDataset = new String[DATASET_COUNT];
         for (int i = 0; i < DATASET_COUNT; i++) {
             mDataset[i] = "This is element #" + i;
